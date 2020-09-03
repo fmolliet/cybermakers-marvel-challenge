@@ -1,0 +1,40 @@
+div.char-card {
+    background-color: #151515;
+    height: 239px;
+    margin: 20px;
+    transition: all .4s ease;
+    width: 163px;
+    
+    &:hover{
+        background-color: #EC1D24;
+        
+        & > a {
+            & > div.char-info {
+                & > div.char-second-name {
+                    color: #FFF;
+                }
+            }
+        }
+    }
+    
+    & > a {
+        text-decoration: none;
+       & > div.char-info {
+           
+            display: flex;
+            flex-direction: column;
+            height: 76px;
+            justify-content: space-around;
+            padding: 0 10px;
+           
+            & > div.char-name {
+                color: #FFF;
+                
+            }
+            
+            & > div.char-second-name {
+                color: #BBBBBB;
+            }
+       }
+    }
+}

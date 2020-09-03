@@ -1,0 +1,16 @@
+div {
+    &.footer {
+        background-color: #202020;
+        bottom: 0;
+        display: flex;
+        height: 35px;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        
+        & > img {
+            max-height: 100%;
+        }
+    }
+    
+}

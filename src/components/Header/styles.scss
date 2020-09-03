@@ -1,0 +1,14 @@
+main {
+    &.header {
+        background-color: #202020;
+        display: flex;
+        justify-content: center;
+        height: 70px;
+        width: 100%;
+        
+        & > img {
+            max-height: 100%;
+        }
+    }
+    
+}

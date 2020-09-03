@@ -1,0 +1,15 @@
+main {
+    &.characters {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        min-height: 100%;
+        
+        & > div.contents {
+            display: flex;
+            flex: 1;
+            flex-wrap: wrap;
+            height: 100%;
+        }
+    }
+}

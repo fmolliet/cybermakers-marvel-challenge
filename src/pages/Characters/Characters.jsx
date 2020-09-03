@@ -1,28 +1,52 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-import dotenv from 'dotenv';
 
+
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import CharacterCard from '../../components/CharacterCard';
 
 import api from '../../services/api';
 
 import './styles.scss';
 
 export default function Characters(){
-    dotenv.config();
+    const [chars, setChars] = useState([]);
+    
     useEffect(()=>{
-        async function listSkus(){
+        async function listCharacters(){
+            const localChars = localStorage.getItem('chars-page-1');
             try{
-                const response = await api.get('/v1/public/characters');
-                    
+                if( localChars ){
+                    setChars(JSON.parse(localChars)); 
+                } else {
+                    const response = await api.get('/v1/public/characters');
+                    localStorage.setItem('chars-page-1',JSON.stringify(response.data));
+                    setChars(response.data); 
+                }
             } catch(err){
-                alert('Erro ao conectar no Backend / ou Sessão expirada');
-                
+                alert('Erro ao conectar no Backend ou chaves de autentificação inválida');
             } 
         }
-        listSkus();
+        listCharacters();
     },[]);
     
     return(
-        <div>personagens</div>
+        <main className="characters">
+            <Header />
+            <div className="contents">
+                <CharacterCard />
+                <CharacterCard />
+                <CharacterCard />
+                <CharacterCard />
+                <CharacterCard />
+                <CharacterCard />
+                <CharacterCard />
+                <CharacterCard />
+                <CharacterCard />
+                <CharacterCard />
+            </div>
+            <Footer />
+        </main>
     );
 }
