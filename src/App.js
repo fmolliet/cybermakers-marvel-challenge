@@ -1,13 +1,11 @@
 import React from 'react';
-import './App.scss';
+import './global.scss';
+
+import Routes from './routes';
 
 function App() {
     return (
-        <div className="App">
-            <header className="App-header">
-        
-            </header>
-        </div>
+        <Routes />
     );
 }
 
