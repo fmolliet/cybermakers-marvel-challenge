@@ -12,5 +12,10 @@ main {
             flex-wrap: wrap;
             height: 100%;
         }
+        
+    }
+    
+    & > .loading {
+        z-index: 10;
     }
 }

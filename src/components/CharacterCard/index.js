@@ -2,7 +2,8 @@ import React from 'react';
 
 import './styles.scss';
 
-export default function CharacterCard({ id, thumbnail, name, description= "" }){
+// eslint-disable-next-line react/prop-types
+export default function CharacterCard({ id, thumbnail, name, description='' }){
     return(
         <div className="char-card">
             <a href={`/${id}`}>
