@@ -2,14 +2,14 @@ import React from 'react';
 
 import './styles.scss';
 
-export default function CharacterCard(){
+export default function CharacterCard({ id, thumbnail, name, description= "" }){
     return(
         <div className="char-card">
-            <a href="#">
-                <img src="http://via.placeholder.com/163" alt="Character Img"/>
+            <a href={`/${id}`}>
+                <img src={thumbnail} alt="Character Img"/>
                 <div className="char-info">
-                    <div className="char-name">NOME</div>
-                    <div className="char-second-name">Nome Secundário</div>
+                    <div className="char-name">{name}</div>
+                    <div className="char-second-name">{description.substr(0,20)}</div>
                 </div>
             </a>
         </div> 

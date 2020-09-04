@@ -4,6 +4,7 @@ main {
         display: flex;
         justify-content: center;
         height: 70px;
+        position: fixed;
         width: 100%;
         
         & > img {

@@ -1,8 +1,6 @@
 import axios from 'axios';
-import dotenv from 'dotenv';
 import md5 from 'md5';
 
-dotenv.config();
 const API      = process.env.REACT_APP_API_KEY;
 const TS       = process.env.REACT_APP_TIMESTAMP;
 const PRIV_KEY = process.env.REACT_APP_PRIVATE_KEY;

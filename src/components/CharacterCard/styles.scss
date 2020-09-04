@@ -19,6 +19,11 @@ div.char-card {
     
     & > a {
         text-decoration: none;
+        & > img {
+            height: 163px;
+            width: 163px;
+        }
+        
        & > div.char-info {
            
             display: flex;
