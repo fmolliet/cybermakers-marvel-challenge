@@ -95,7 +95,7 @@ export default function Characters(){
     return(
         <main className="characters">
             <Header />
-            <NavMenu prevAction={prevPage} nextAction={nextPage} />
+            <NavMenu page={page} prevAction={prevPage} nextAction={nextPage} />
             <div className="contents">
                 {chars.map( character => ( 
                     <CharacterCard 

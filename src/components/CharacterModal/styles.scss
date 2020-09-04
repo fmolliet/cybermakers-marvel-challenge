@@ -20,6 +20,16 @@
             padding-left: 15px;
             //justify-content: center;
             
+            & > .back-icon {
+                color: #FFF;
+                cursor: pointer;
+                transition: color .4s ease-in-out;
+                
+                &:hover {
+                    color: #EC1D24;
+                }
+            }
+            
             & > div {
                 align-items: center;
                 display: flex;

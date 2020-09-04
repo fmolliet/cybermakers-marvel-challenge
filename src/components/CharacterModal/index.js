@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import {Modal, Backdrop, Fade} from '@material-ui/core';
 import { FiArrowLeft } from 'react-icons/fi';
 
@@ -23,7 +23,7 @@ export default function CharacterModal({description = '',name,thumbnail, open, h
             <Fade in={open}>
                 <div className="paper">
                     <div className="modal-header">
-                        <FiArrowLeft color="#FFF" size={24} onClick={handleClose}/>
+                        <FiArrowLeft className="back-icon" size={24} onClick={handleClose}/>
                         <div>
                             <h2 id="transition-modal-title">{name}</h2>
                         </div>
