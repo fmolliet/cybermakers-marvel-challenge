@@ -1,5 +1,9 @@
 .nav-menu {
     position: fixed;
     top: 80px;
-    left: 48%;
+    left: 46%;
+    
+    & > button {
+        padding: 5px 10px;
+    }
 }
